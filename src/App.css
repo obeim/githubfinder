@@ -1,38 +1,176 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primary: #001f3f;
+  --btn-default: #001f3f;
+  --black: #111111;
+  --light: #dddddd;
+  --grey: #aaaaaa;
+  --red: #ff4136;
+  --green: #2ecc40;
+  --yellow: #ffdc00;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  font-weight: 500;
+  padding: 5px;
+}
+textarea,
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+}
+a:hover {
+  color: var(--red);
+}
+i {
+  margin: 0 3px;
+}
+
+.navbar {
+  padding: 0 30px;
+  box-shadow: 0 2px 4px 0 rgba(61, 60, 60, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  margin: 10px 0;
+  border: 1px solid #aaaaaa;
+  padding: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.all-center {
+  text-align: center;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-items: center;
+}
+.alert {
+  background-color: #dddddd;
+  margin: 10px;
+  padding: 10px;
+}
+img {
+  width: 100%;
+}
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border: none;
+  margin: 6px;
+  cursor: pointer;
+  background-color: var(--btn-default);
+  color: white;
+  border: var(--btn-default) 1px solid;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  border: var(--primary) 1px solid;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: var(--primary);
+}
+.btn-black {
+  background-color: var(--black);
+  color: white;
+  border: var(--black) 1px solid;
+}
+
+.btn-black:hover {
+  background-color: white;
+  color: var(--black);
+}
+.btn-light {
+  background-color: var(--light);
+  color: var(--black);
+  border: var(--light) 1px solid;
+}
+.btn-light:hover {
+  background-color: white;
+  color: var(--black);
+}
+.round-img {
+  border-radius: 2333px;
+}
+.bg-primary {
+  background-color: var(--primary);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.bg-primary a,
+li {
+  color: white;
+}
+.badge {
+  display: inline-block;
+  margin: 2px 4px;
+  padding: 4px;
+  background-color: var(--grey);
+  border-radius: 5px;
+}
+.badge-primary {
+  background-color: var(--primary);
+  color: white;
+}
+.badge-green {
+  background-color: var(--green);
+  color: white;
+}
+.badge-red {
+  background-color: var(--red);
+  color: white;
+}
+.badge-yellow {
+  background-color: var(--yellow);
+  color: white;
+}
+.badge-light {
+  background-color: var(--light);
+  color: var(--black);
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+}
+.form input[type="text"] {
+  width: 89.8%;
+  padding: 0.3rem;
+}
+.form input[type="submit"] {
+  width: 9%;
+  cursor: pointer;
 }
